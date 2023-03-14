@@ -1,0 +1,28 @@
+﻿@model System.Data.DataTable
+@{ 
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Customer FirstName</th>
+        <th>Customer LastName</th>
+        <th>Customer Email</th>
+    </tr>
+
+    @{ 
+
+        for (int i = 0; i < Model.Rows.Count; i++)
+        {
+        <tr>
+            <td>@Model.Rows[i][0]</td>
+            <td>@Model.Rows[i][1]</td>
+            <td>@Model.Rows[i][2]</td>
+
+        </tr>
+
+        }
+    }
